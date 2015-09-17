@@ -1,0 +1,25 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 16, in script
+    scene bg lake at Zoom((800, 600), (0, 0, 3264, 2448) (0, 0, 3264, 2448), 1.0), truecenter  with fade:
+SyntaxError: invalid syntax (script.rpy, line 16)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 16, in script
+    scene bg lake at Zoom((800, 600), (0, 0, 3264, 2448) (0, 0, 3264, 2448), 1.0), truecenter  with fade:
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1140, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1016, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/python.py", line 1482, in py_eval
+    return eval(py_compile(source, 'eval'), globals, locals)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/python.py", line 512, in py_compile
+    raise e
+SyntaxError: invalid syntax (script.rpy, line 16)
+
+Darwin-14.4.0-x86_64-i386-64bit
+Ren'Py 6.99.5.602
+IMGD_Project 0.0
