@@ -2,8 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 16: end of line expected.
-    scene bg lake at truecenter zoom .5
-                                ^
+File "game/script.rpy", line 5: is not terminated with a newline. (Check strings and parenthesis.)
+    image bg lake = LiveComposite(
 
 Ren'Py Version: Ren'Py 6.99.5.602

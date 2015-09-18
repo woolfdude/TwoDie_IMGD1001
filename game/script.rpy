@@ -2,7 +2,8 @@
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
-image bg lake = "Lake.jpg"
+image bg lake = Image(
+   "bg_lake.jpeg", xysize = (40,40))
 
 # Declare characters used by this game.
 define e = Character('Eileen', color="#c8ffc8")
