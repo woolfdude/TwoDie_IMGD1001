@@ -1,24 +1,24 @@
-Fri Sep 18 11:26:58 2015
+Fri Sep 18 12:36:59 2015
 Darwin-14.4.0-x86_64-i386-64bit
 Ren'Py 6.99.5.602
  
 
-Bootstrap to the start of init.init took 0.10s
-Early init took 0.04s
+Bootstrap to the start of init.init took 0.11s
+Early init took 0.02s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.04s
-Loading persistent took 0.01s
+Loading script took 0.08s
+Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.08s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Cleaning cache took 0.04s
+Cleaning cache took 0.05s
 Making clean stores took 0.00s
-Creating interface object took 0.11s
+Creating interface object took 0.10s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.00s
 Build styles took 0.00s
 Load screen analysis took 0.01s
 Analyze screens took 0.00s
@@ -31,7 +31,7 @@ Performance test:
 Interface start took 0.01s
 
 Windowed mode.
-Screen sizes: virtual=(800, 600) physical=(1052, 789)
+Screen sizes: virtual=(1280, 720) physical=(997, 561)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel HD Graphics 4000 OpenGL Engine'
 Version: '2.1 INTEL-10.6.31'
@@ -178,11 +178,18 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.832520961761s
+Total time until interface ready: 0.943755865097s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.019584 seconds.
-- Frame drawn at 0.032483 seconds.
-- Frame drawn at 0.048025 seconds.
-- Frame drawn at 0.070472 seconds.
-- 0.070472 seconds to render 5 frames.
+- Frame drawn at 0.017039 seconds.
+- Frame drawn at 0.032222 seconds.
+- Frame drawn at 0.044657 seconds.
+- Frame drawn at 0.060513 seconds.
+- 0.060513 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.04s
+Running _start took 0.00s

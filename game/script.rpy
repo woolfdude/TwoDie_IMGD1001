@@ -3,7 +3,8 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 image bg lake = Image(
-   "bg_lake.jpeg", xysize = (40,40))
+   "bg_lake.png")
+image logo = Image("dice.png")
 
 # Declare characters used by this game.
 define e = Character('Eileen', color="#c8ffc8")
@@ -11,6 +12,20 @@ define s = Character('Saul', color="#c8ffc4")
 
 
 # The game starts here.
+
+label splashscreen:
+    scene black 
+    with Pause(1)
+
+
+    show logo with dissolve
+    with Pause(2)
+    
+    scene black with dissolve
+    with Pause(1)
+
+    return
+
 
 label start:
     play music "Cheremisinov.mp3"

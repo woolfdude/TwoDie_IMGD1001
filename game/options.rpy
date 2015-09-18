@@ -17,8 +17,8 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 800
-    config.screen_height = 600
+    config.screen_width = 1280  
+    config.screen_height = 720
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
@@ -71,7 +71,7 @@ init -1 python hide:
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#1A0001",
+        mm_root = "bg_title.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter

@@ -1,14 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While loading <'Image' 'bg_lake.png'>:
-  File "game/script.rpy", line 17, in script
+  File "game/script.rpy", line 32, in script
     scene bg lake at truecenter  with fade
 IOError: Couldn't find file 'bg_lake.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 17, in script
+  File "game/script.rpy", line 32, in script
     scene bg lake at truecenter  with fade
   File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1250, in execute
     renpy.exports.with_statement(trans, paired)
