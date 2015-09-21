@@ -3,7 +3,7 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 image bg lake = Image("images/bg_lake.png")
-image logo = Image("images/dice.png")
+image logo = Image("images/Assets/Misc/ms-logo.png")
 
 # Declare characters used by this game.
 define w = Character('Waifu', color="#c8ffc8")
