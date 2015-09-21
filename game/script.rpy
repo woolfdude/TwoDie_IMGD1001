@@ -2,9 +2,8 @@
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
-image bg lake = Image(
-   "bg_lake.png")
-image logo = Image("dice.png")
+image bg lake = Image("images/bg_lake.png")
+image logo = Image("images/dice.png")
 
 # Declare characters used by this game.
 define w = Character('Waifu', color="#c8ffc8")
@@ -43,6 +42,7 @@ label conflict:
     return
 
 label murder:
+    
     "The large butcher knife you were using to slice potatoes slips out 
      of your hand and gashes your wifes neck. Six or seven times."
     "Yeah, she's dead"

@@ -1,21 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' 'bg_lake.png'>:
-  File "game/script.rpy", line 32, in script
-    scene bg lake at truecenter  with fade
-IOError: Couldn't find file 'bg_lake.png'.
+While loading <'Image' 'bg_title.png'>:
+IOError: Couldn't find file 'bg_title.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 32, in script
-    scene bg lake at truecenter  with fade
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1250, in execute
-    renpy.exports.with_statement(trans, paired)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/exports.py", line 1251, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 1865, in do_with
-    clear=clear)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in script
+    $ ui.interact()
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 797, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/python.py", line 1448, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in <module>
+    $ ui.interact()
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ui.py", line 277, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 2285, in interact
     repeat, rv = self.interact_core(preloads=preloads, **kwargs)
   File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 2622, in interact_core
@@ -32,18 +32,6 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
     rv = d.render(widtho, heighto, st, at)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/transition.py", line 176, in render
-    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
-  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3066)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
-    rv = d.render(widtho, heighto, st, at)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/transition.py", line 362, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3066)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
-    rv = d.render(widtho, heighto, st, at)
   File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/layout.py", line 650, in render
     surf = render(child, width, height, cst, cat)
   File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3066)
@@ -56,14 +44,20 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
     rv = d.render(widtho, heighto, st, at)
-  File "renpy/display/accelerator.pyx", line 104, in renpy.display.accelerator.transform_render (gen/renpy.display.accelerator.c:1888)
-    cr = render(child, widtho, heighto, st - self.child_st_base, at)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/screen.py", line 610, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3066)
+    cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
     rv = d.render(widtho, heighto, st, at)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/image.py", line 218, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/image.py", line 90, in wrap_render
-    rend = render(child, w, h, st, at)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/layout.py", line 650, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3066)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
+    rv = d.render(widtho, heighto, st, at)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/layout.py", line 1015, in render
+    back = render(style.background, bw, bh, st, at)
   File "renpy/display/render.pyx", line 103, in renpy.display.render.render (gen/renpy.display.render.c:3066)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 185, in renpy.display.render.render (gen/renpy.display.render.c:2683)
@@ -76,7 +70,7 @@ Full traceback:
     surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
   File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/loader.py", line 512, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'bg_lake.png'.
+IOError: Couldn't find file 'bg_title.png'.
 
 Darwin-14.4.0-x86_64-i386-64bit
 Ren'Py 6.99.5.602
