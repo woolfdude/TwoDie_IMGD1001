@@ -2,11 +2,22 @@
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
-image bg lake = Image("images/bg_lake.png")
+image bg bath = Image("images/Assets/Background/bg-bath.jpg")
+image bg dining = Image("images/Assets/Background/bg-dining.jpg")
+image bg garden = Image("images/Assets/Background/bg-garden.jpg")
+image bg kitchen = Image("images/Assets/Background/bg-kitchen.jpg")
+image bg lake = Image("images/Assets/Background/bg-lake.jpg")
+image bg living = Image("images/Assets/Background/bg-living.jpg")
+image bg room = Image("images/Assets/Background/bg-room.jpg")
+image bg station = Image("images/Assets/Background/bg-station.jpg")
+
+image peggy = Image("images/Assets/Character/ch-neighbor.png")
+image waifu = Image("images/Assets/Character/ch-spouse-f.png")
+
 image logo = Image("images/Assets/Misc/ms-logo.png")
 
 # Declare characters used by this game.
-define w = Character('Waifu', color="#c8ffc8")
+define w = Character('Wife', color="#c8ffc8")
 define p = Character('Peggy', color="#c8ffc8")
 
 
@@ -19,83 +30,125 @@ label splashscreen:
     with Pause(2)
     scene black with dissolve
     with Pause(1)
-    return
-
-
-label start:
     play music "Cheremisinov.mp3"
-    scene bg lake at truecenter  with fade
+    return
     
+
+label start:    
     jump conflict
     return
 
 label conflict:
-    "Things were getting heated in a fight with your wife"
-    w "I'm leaving you"
+    scene bg kitchen at truecenter  with fade
+    "After a tense dinner party with some of your closest friends, 
+     you’re in the kitchen cleaning up and preparing dinner for 
+     the upcoming week and trying not to think about the growing 
+     rift between you and your spouse. They break the angry silence."
+    show waifu at left
+    w "Honey, I… I can’t. We can’t. I’m leaving you."
+    scene black  with fade
     menu:
-        "Let her go":
+        "Let them go":
             jump lethergo
-        "Beg her":
-            jump counseling
-        "Stop her (however necisary)":
-            jump murder
+        "Stop them":
+            jump stopthem
     return
 
-label murder:
-    
-    "The large butcher knife you were using to slice potatoes slips out 
-     of your hand and gashes your wifes neck. Six or seven times."
-    "Yeah, she's dead"
+label stopthem:
+    scene bg kitchen at truecenter  with fade
+    "You feel a spark inside your chest grow into a will to fight. “No,” you say."
+    show waifu at left
+    w "'No?' What are you going to do about it?"
+    scene black with fade
     menu:
-        "Oh god what have I done?":
+         "Go to counseling":
+              jump counseling
+         "Kill them":
+             jump murder
+    return
+label murder:
+    scene bg kitchen with fade
+    "The butcher knife you were using to prepare tomorrow’s dinner slips 
+    and slices your spouse’s neck. Six or seven times."
+    scene black  with fade
+    menu:
+        "The guilt of what you’ve done overwhelms you, and you turn yourself in.":
             jump turnselfin
-        "She deserved it and like hell I'm going to take the fall for it.":
+        "They deserved it, you decide, and like hell you’re going to take the fall for it.":
             jump phonecall
-        "I can't let this ruin my life":
+        "I can’t let this ruin my life, you think.":
             jump phonecall
     return
 
 label phonecall:
-    "RING RING"
+    scene bg living with fade
+    "*phone rings*"
+    show peggy at right
     p "Hi! How is waifu?"
+    scene black  with fade
     menu: 
         "She is out of town":
+            scene bg living with fade
+            show peggy at right
+            p "Oh, well, we’ll have to catch up some other time, then. Toodleoo!"
             jump hidebody
         "She left me":
+            scene bg living with fade
+            show peggy at right
+            p "Oh, my God, that’s horrible! How are you doing? How is she doing? 
+               How is the kid doing? Are you going to move past this?"
+            "You reassure her that it’s over, but you’re doing well. After some 
+             back and forth, she tells you she has to go."
+            show peggy at right
+            p "I’m so sorry to hear that. Listen, if you ever need anything, I’m 
+               always here for you. You’ll make it through this. Let’s catch up 
+               later, yeah?"
             jump hidebody
     return
-
+    
+    
+    
+    
 label hidebody:
-    "You have dinner guests coming over tonight, you had better hide the body"
+    scene bg kitchen with fade
+    "You decide to hide the body. But where would be a good place it wouldn’t be 
+     found?"
+    scene black  with fade
     menu:
-        "I mean, you also need to make food. Why not both?":
+        "You check your schedule. Ah, yes, the upcoming dinner party. Why not kill 
+         two birds with one stone?":
             jump feed
-        "burying it in the garden. Your tomatoes haven't been doing so well this 
-         year, and hopefully, this fertilizer will change that.":
+        "You decide to bury the body in the garden. Your tomatoes haven’t been doing 
+         so well this year, and hopefully, this fertilizer will change that.":
             jump plants
-        "dumping it in the lake":
+        "You dump the body, weighted down with your spouse’s old ankle weights, in the 
+         local lake. It sinks to the bottom, never to be seen again… or so you hope.":
             jump lake
-        "bleach in the bahtub":
+        "You decide to liquify the body in your bathtub. ":
             jump bathtub
             
     return
     
 label bathtub:
+    scene bg bath with fade
     "Unfortunately, you were never much good at chemistry, and you botch the whole 
      thing, clogging the shower drain in the process. The plumber you call in fixes 
      it for you, but by then, he knows too much. And anyway, what's one plumber among friends?"
     return
     
 label lake:
+    scene bg lake with fade
     "The lake is dredged for dam renovations, and the body is found. Fortunately, 
      so are several others. Looks like you're in the clear for a while yet. "
     return
     
 label plants:
+    scene bg garden with fade
     "Your tomatoes appreciate the extra nutrients and grow stronger than ever."
     return
     
 label feed:
+    scene bg dining with fade
     "Your dinner guests tell you it's the most delicious meal they've ever had. 
      You go on to enter the dish in countless competitions, winning prizes left 
      and right. But soon, you run out of usable meat, and demand has not slowed 
@@ -103,6 +156,7 @@ label feed:
     return
     
 label turnselfin:
+    scene bg station with fade
     "The guilt of what you've done overwhelms you, and you turn yourself in."
     return
 
@@ -110,33 +164,27 @@ label turnselfin:
 
 
 label lethergo:
-    "You're glad they're happy. You still talk sometimes, mostly about 
-trivial things. The weather, new movie releases. It used to hurt, but 
-now it's more of a dull ache, and it gets better every day. You'll find 
-your own happiness somewhere, you're sure of it."
+    scene bg kitchen with fade
+    "You let them go without a fight. To tell the truth, you feel like 
+     the fight left you a long time ago. Now you’re just tired."
+    
+    scene black with fade
+    "It takes a while, but you move on. You're glad they're happy. 
+     You still talk sometimes, mostly about trivial things. The weather, 
+     new movie releases. It used to hurt, but now it's more of a dull ache, 
+     and it gets better every day. You'll find your own happiness somewhere, 
+     you're sure of it."
     return
-
-
-
-
 
 
 
 label counseling:
-    w "I mean..."
-    w "We could try counseling?"
-    "You now have counseling 14 times a week for 2 hours."
-    menu:
-        "Fuck that":
-            jump divorce
-        "Devote yourself":
-            jump everafter
+    scene bg kitchen with fade
+    show waifu at left
+    w "I guess we could go to counseling. But it’s a lot of work. Are you 
+       willing to put in the effort?"
+    "You give it your all, and your hard work pays off. The two of you 
+       live happily ever after."
+    "You promise to try your best, but secretly, your heart was never in it. 
+     You divorce years down the road, bitter and resentful of the time wasted."
     return
-label divorce:
-    "You divorce years down the road, bitter and resentful of the time wasted."
-    return
-    
-label everafter:
-    "Live happily ever after"
-    "For now"
-    
