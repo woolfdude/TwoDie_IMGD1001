@@ -7,12 +7,12 @@ image bg dining = Image("images/Assets/Background/bg-dining.jpg")
 image bg garden = Image("images/Assets/Background/bg-garden.jpg")
 image bg kitchen = Image("images/Assets/Background/bg-kitchen.jpg")
 image bg lake = Image("images/Assets/Background/bg-lake.jpg")
-image bg living = Image("images/Assets/Background/bg-living.jpg")
+image bg living = Image("images/Assets/Background/bg-dining.jpg") #REVERT BACK TO LIVING
 image bg room = Image("images/Assets/Background/bg-room.jpg")
 image bg station = Image("images/Assets/Background/bg-station.jpg")
 
 image peggy = Image("images/Assets/Character/ch-neighbor.png")
-image waifu = Image("images/Assets/Character/ch-spouse-f.png")
+image waifu = Image("images/Assets/Character/ch-spouse-m.png")
 
 image logo = Image("images/Assets/Misc/ms-logo.png")
 
