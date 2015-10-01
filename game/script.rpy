@@ -10,17 +10,18 @@ image bg lake = Image("images/Assets/Background/bg-lake.jpg")
 image bg living = Image("images/Assets/Background/bg-dining.jpg") #REVERT BACK TO LIVING
 image bg room = Image("images/Assets/Background/bg-room.jpg")
 image bg station = Image("images/Assets/Background/bg-station.jpg")
+image spouse = Image("images/Assets/Character/ch-spouse-f.png")
+
 
 image peggy = Image("images/Assets/Character/ch-neighbor.png")
-image waifu = Image("images/Assets/Character/ch-spouse-m.png")
 
 image logo = Image("images/Assets/Misc/ms-logo.png")
 
 # Declare characters used by this game.
-define w = Character('Wife', color="#c8ffc8")
+define spouse = Character('Spouse', color="#c8ffc8")
 define p = Character('Peggy', color="#c8ffc8")
 
-
+$ suspicion = 0
 # The game starts here.
 
 label splashscreen:
@@ -34,19 +35,31 @@ label splashscreen:
     return
     
 
-label start:    
-    jump conflict
+label start:  
+    jump intro
     return
 
+label intro:
+    scene black 
+    $ player_name = renpy.input("What is your name?")
+    if player_name == "":
+        $ player_name="Kiran"
+    $ spouse_name = renpy.input("And your spouse's name?")
+    if spouse_name == "":
+        $ spouse_name="Sharon"
+    define spouse = Character('[spouse_name]', color="#c8ffc8")
+    "I'm sorry to break it to you, [player_name], but..."
+    jump conflict
+
 label conflict:
-    scene bg kitchen at truecenter  with fade
+    scene bg kitchen at truecenter with fade
     "After a tense dinner party with some of your closest friends, 
      you’re in the kitchen cleaning up and preparing dinner for 
      the upcoming week and trying not to think about the growing 
      rift between you and your spouse. They break the angry silence."
-    show waifu at left
-    w "Honey, I… I can’t. We can’t. I’m leaving you."
-    scene black  with fade
+    show spouse at left with easeinleft
+    spouse "[player_name], I… I can’t. We can’t. I’m leaving you."
+    hide spouse with dissolve
     menu:
         "Let them go":
             jump lethergo
@@ -55,22 +68,19 @@ label conflict:
     return
 
 label stopthem:
-    scene bg kitchen at truecenter  with fade
     "You feel a spark inside your chest grow into a will to fight. “No,” you say."
-    show waifu at left
-    w "'No?' What are you going to do about it?"
-    scene black with fade
+    show spouse at left
+    spouse "'No?' What are you going to do about it?"
+    hide spouse with dissolve
     menu:
          "Go to counseling":
               jump counseling
          "Kill them":
-             jump murder
+              jump murder
     return
 label murder:
-    scene bg kitchen with fade
     "The butcher knife you were using to prepare tomorrow’s dinner slips 
     and slices your spouse’s neck. Six or seven times."
-    scene black  with fade
     menu:
         "The guilt of what you’ve done overwhelms you, and you turn yourself in.":
             jump turnselfin
@@ -83,18 +93,15 @@ label murder:
 label phonecall:
     scene bg living with fade
     "*phone rings*"
-    show peggy at right
-    p "Hi! How is waifu?"
-    scene black  with fade
+    show peggy at right with easeinright
+    p "Hi! How is [spouse_name]?"
     menu: 
         "She is out of town":
-            scene bg living with fade
-            show peggy at right
+            show peggy at right with easeinright
             p "Oh, well, we’ll have to catch up some other time, then. Toodleoo!"
             jump hidebody
         "She left me":
-            scene bg living with fade
-            show peggy at right
+            show peggy at right with easeinright
             p "Oh, my God, that’s horrible! How are you doing? How is she doing? 
                How is the kid doing? Are you going to move past this?"
             "You reassure her that it’s over, but you’re doing well. After some 
@@ -113,7 +120,6 @@ label hidebody:
     scene bg kitchen with fade
     "You decide to hide the body. But where would be a good place it wouldn’t be 
      found?"
-    scene black  with fade
     menu:
         "You check your schedule. Ah, yes, the upcoming dinner party. Why not kill 
          two birds with one stone?":
@@ -164,11 +170,8 @@ label turnselfin:
 
 
 label lethergo:
-    scene bg kitchen with fade
     "You let them go without a fight. To tell the truth, you feel like 
      the fight left you a long time ago. Now you’re just tired."
-    
-    scene black with fade
     "It takes a while, but you move on. You're glad they're happy. 
      You still talk sometimes, mostly about trivial things. The weather, 
      new movie releases. It used to hurt, but now it's more of a dull ache, 
@@ -179,9 +182,8 @@ label lethergo:
 
 
 label counseling:
-    scene bg kitchen with fade
-    show waifu at left
-    w "I guess we could go to counseling. But it’s a lot of work. Are you 
+    show spouse at left
+    spouse "I guess we could go to counseling. But it’s a lot of work. Are you 
        willing to put in the effort?"
     "You give it your all, and your hard work pays off. The two of you 
        live happily ever after."
