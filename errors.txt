@@ -2,16 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 50: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Oh god what have I done?"
-                              ^
-
-File "game/script.rpy", line 62: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "She is out of town"
-                        ^
-
-File "game/script.rpy", line 71: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "I mean, you also need to make food. Why not both?"
-                                                       ^
+File "game/script.rpy", line 74: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    hide spouse with dissolve
+    ^
 
 Ren'Py Version: Ren'Py 6.99.5.602
