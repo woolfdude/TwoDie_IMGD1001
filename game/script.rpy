@@ -9,16 +9,17 @@ image bg kitchen = Image("images/Assets/Background/bg-kitchen.jpg")
 image bg lake = Image("images/Assets/Background/bg-lake.jpg")
 image bg living = Image("images/Assets/Background/bg-dining.jpg") #REVERT BACK TO LIVING
 image bg room = Image("images/Assets/Background/bg-room.jpg")
+image bg therapist = Image("images/Assets/Background/bg-therapist.jpg")
 image bg station = Image("images/Assets/Background/bg-station.jpg")
-image spouse = Image("images/Assets/Character/ch-spouse-f.png")
-
-
 image peggy = Image("images/Assets/Character/ch-neighbor.png")
+image spousem = Image("images/Assets/Character/ch-spouse-m.png")
+image spousef = Image("images/Assets/Character/ch-spouse-f.png")
 
+
+define gender = "female"
 image logo = Image("images/Assets/Misc/ms-logo.png")
 
 # Declare characters used by this game.
-define spouse = Character('Spouse', color="#c8ffc8")
 define p = Character('Peggy', color="#c8ffc8")
 
 $ suspicion = 0
@@ -37,18 +38,35 @@ label splashscreen:
 
 label start:  
     jump intro
-    return
 
 label intro:
     scene black 
-    $ player_name = renpy.input("What is your name?")
-    if player_name == "":
-        $ player_name="Kiran"
-    $ spouse_name = renpy.input("And your spouse's name?")
-    if spouse_name == "":
-        $ spouse_name="Sharon"
+    menu:
+        "Male":
+            $ gender = "male"
+        "Female":
+            $ gender = "female"
+    if gender == "male":
+        $ player_name = renpy.input("What is your name?")
+        if player_name == "":
+            $ player_name="Kiran"
+        $ spouse_name = renpy.input("And your wife's name?")
+        if spouse_name == "":
+            $ spouse_name="Sharon"
+        
+        
+    elif gender == "female":
+        $ player_name = renpy.input("What is your name?")
+        if player_name == "":
+            $ player_name="Sharon"
+        $ spouse_name = renpy.input("And your husband's name?")
+        if spouse_name == "":
+            $ spouse_name="Kiran"
+    
+    define player = Character('[player_name]', color="#c8ffc8")
     define spouse = Character('[spouse_name]', color="#c8ffc8")
     "I'm sorry to break it to you, [player_name], but..."
+    
     jump conflict
 
 label conflict:
@@ -57,7 +75,12 @@ label conflict:
      you’re in the kitchen cleaning up and preparing dinner for 
      the upcoming week and trying not to think about the growing 
      rift between you and your spouse. They break the angry silence."
-    show spouse at left with easeinleft
+    
+    if gender == "male":
+        show spousef at left with easeinleft
+    elif gender == "female":
+        show spousem at left with easeinleft
+        
     spouse "[player_name], I… I can’t. We can’t. I’m leaving you."
     hide spouse with dissolve
     menu:
@@ -69,7 +92,6 @@ label conflict:
 
 label stopthem:
     "You feel a spark inside your chest grow into a will to fight. “No,” you say."
-    show spouse at left
     spouse "'No?' What are you going to do about it?"
     hide spouse with dissolve
     menu:
@@ -182,6 +204,7 @@ label lethergo:
 
 
 label counseling:
+    scene bg therapist with fade
     show spouse at left
     spouse "I guess we could go to counseling. But it’s a lot of work. Are you 
        willing to put in the effort?"
