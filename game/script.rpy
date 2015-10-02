@@ -7,7 +7,7 @@ image bg dining = Image("images/Assets/Background/bg-dining.jpg")
 image bg garden = Image("images/Assets/Background/bg-garden.jpg")
 image bg kitchen = Image("images/Assets/Background/bg-kitchen.jpg")
 image bg lake = Image("images/Assets/Background/bg-lake.jpg")
-image bg living = Image("images/Assets/Background/bg-dining.jpg") #REVERT BACK TO LIVING
+image bg living = Image("images/Assets/Background/bg-living.jpg")
 image bg room = Image("images/Assets/Background/bg-room.jpg")
 image bg therapist = Image("images/Assets/Background/bg-therapist.jpg")
 image bg station = Image("images/Assets/Background/bg-station.jpg")
@@ -32,14 +32,14 @@ label splashscreen:
     with Pause(2)
     scene black with dissolve
     with Pause(1)
-    play music "Cheremisinov.mp3"
     return
     
 
-label start:  
+label start: 
+    play music ["Music/music2.mp3", "Music/music6.mp3"] loop
     jump intro
 
-label intro:
+label intro: 
     scene black 
     menu:
         "Male":
@@ -69,6 +69,11 @@ label intro:
     
     jump conflict
 
+
+
+
+
+
 label conflict:
     scene bg kitchen at truecenter with fade
     "After a tense dinner party with some of your closest friends, 
@@ -81,11 +86,13 @@ label conflict:
     elif gender == "female":
         show spousem at left with easeinleft
         
-    spouse "[player_name], I… I can’t. We can’t. I’m leaving you."
-    hide spouse with dissolve
+    spouse "[player_name], Honey, I… I can't. We can't. I'm leaving you. 
+            You're not the person I married. You're always tense, distant. 
+            I can't remember the last time you laughed and meant it. 
+            Neither of us are happy, are we?"
     menu:
         "Let them go":
-            jump lethergo
+            jump letthemgo
         "Stop them":
             jump stopthem
     return
@@ -95,18 +102,26 @@ label stopthem:
     spouse "'No?' What are you going to do about it?"
     hide spouse with dissolve
     menu:
-         "Go to counseling":
+         "Suggest Counseling":
               jump counseling
-         "Kill them":
+         "Get Mad":
               jump murder
     return
+    
+    
+    
 label murder:
-    "The butcher knife you were using to prepare tomorrow’s dinner slips 
-    and slices your spouse’s neck. Six or seven times."
+    "The butcher knife you were using to prepare tomorrow's dinner slips and 
+     slices your spouse's neck. Six or seven times. At least, that's what 
+     you'll tell people if anyone ever asks."
+    "The truth is that you don't even remember doing it, just finding yourself 
+     standing over their body with the bloody knife in hand, wondering how you 
+     got there from only talking. But you always did have an angry streak."
     menu:
-        "The guilt of what you’ve done overwhelms you, and you turn yourself in.":
+        "What have I done??":
             jump turnselfin
-        "They deserved it, you decide, and like hell you’re going to take the fall for it.":
+        "They deserved it, you decide, and like hell you’re going to take the fall 
+         for it.":
             jump phonecall
         "I can’t let this ruin my life, you think.":
             jump phonecall
@@ -116,27 +131,23 @@ label phonecall:
     scene bg living with fade
     "*phone rings*"
     show peggy at right with easeinright
-    p "Hi! How is [spouse_name]?"
+    p "Hey [player_name],just calling to check up with you guys. How's the 
+       [spouse_name] doing?"
+    "You decide to tell her that [spouse_name].."
     menu: 
-        "She is out of town":
-            show peggy at right with easeinright
+        "..is out of town":
             p "Oh, well, we’ll have to catch up some other time, then. Toodleoo!"
-            jump hidebody
-        "She left me":
-            show peggy at right with easeinright
-            p "Oh, my God, that’s horrible! How are you doing? How is she doing? 
-               How is the kid doing? Are you going to move past this?"
+        "decided to leave you":
+            p "Oh, my God, that's horrible! How are you doing? How are they doing? 
+            How is the kid doing? Are you going to move past this?"
             "You reassure her that it’s over, but you’re doing well. After some 
              back and forth, she tells you she has to go."
-            show peggy at right
             p "I’m so sorry to hear that. Listen, if you ever need anything, I’m 
                always here for you. You’ll make it through this. Let’s catch up 
                later, yeah?"
-            jump hidebody
+    "Peggy hangs up"
+    jump hidebody
     return
-    
-    
-    
     
 label hidebody:
     scene bg kitchen with fade
@@ -185,31 +196,68 @@ label feed:
     
 label turnselfin:
     scene bg station with fade
-    "The guilt of what you've done overwhelms you, and you turn yourself in."
+    "The guilt of your actions overwhelms you, and you call for both an ambulance 
+     and the police. But by the time the ambulance gets there, it's already too 
+     late."
+    "The police give you a moment to mourn your dead spouse before they haul you 
+     away to the police station, bloody clothes and all. As they begin to drag 
+     you towards the squad car, all you can think is that life changes before 
+     you even know it's happened."
+    jump end
     return
 
 
 
 
-label lethergo:
+label letthemgo:
     "You let them go without a fight. To tell the truth, you feel like 
      the fight left you a long time ago. Now you’re just tired."
-    "It takes a while, but you move on. You're glad they're happy. 
-     You still talk sometimes, mostly about trivial things. The weather, 
-     new movie releases. It used to hurt, but now it's more of a dull ache, 
-     and it gets better every day. You'll find your own happiness somewhere, 
-     you're sure of it."
+    
+    spouse "That's it? You agree just like that? God, I thought for sure 
+            you'd try to stop me. But I guess I don't know you the way I 
+            thought I did. Goodbye."
+    
+    "The days turn into weeks, and the weeks turn into months. It takes a 
+     while, but you move on. You're glad they're happy. You still talk 
+     sometimes, mostly about trivial things. The weather, new movie releases. 
+     It used to hurt, but now it's more of a dull ache, and it gets better 
+     every day. You'll find your own happiness somewhere, you're sure of it."
     return
 
 
 
 label counseling:
-    scene bg therapist with fade
-    show spouse at left
     spouse "I guess we could go to counseling. But it’s a lot of work. Are you 
        willing to put in the effort?"
-    "You give it your all, and your hard work pays off. The two of you 
-       live happily ever after."
-    "You promise to try your best, but secretly, your heart was never in it. 
-     You divorce years down the road, bitter and resentful of the time wasted."
+    
+    scene bg therapist with fade
+    if gender == "male":
+        show spousef at left with easeinleft
+    elif gender == "female":
+        show spousem at left with easeinleft
+        
+    "The worthwhile things in life all take effort. 
+    That's what makes them worthwhile."
+
+    "You schedule the counseling and attend every meeting. Your genuine desire
+    to make this work shows. You give it your all, and your hard work pays off.
+    The two of you live happily ever after."
+    
+    "You start the counseling with the best of intentions, but life always seems 
+    to get in the way. Sometimes it's your job. Sometimes it's your friends. 
+    Sometimes it's just your vindictive nature. But whatever the case, your 
+    marriage continues to crumble. You wonder if your heart was ever in it in 
+    the first place."
+    "You divorce years down the road, bitter and resentful of the time wasted."
+    jump end
     return
+    
+    
+label end:
+    scene black with fade
+    if gender == "male":
+        hide spousef with fade
+    elif gender == "female":
+        hide spousem with fade
+    stop music fadeout .1
+    with Pause(4)
