@@ -3,14 +3,25 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 image bg bath = Image("images/Assets/Background/bg-bath.jpg")
+image bg bath real = Image("images/Assets/Background/Originals/bg-bath-original.jpg")
 image bg dining = Image("images/Assets/Background/bg-dining.jpg")
+image bg dining real = Image("images/Assets/Background/Originals/bg-dining-original.jpg")
 image bg garden = Image("images/Assets/Background/bg-garden.jpg")
+image bg garden real = Image("images/Assets/Background/Originals/bg-garden-original.jpg")
 image bg kitchen = Image("images/Assets/Background/bg-kitchen.jpg")
+image bg kitchen real = Image("images/Assets/Background/Originals/bg-kitchen-original.jpg")
 image bg lake = Image("images/Assets/Background/bg-lake.jpg")
+image bg lake real = Image("images/Assets/Background/Originals/bg-lake-original.jpg")
 image bg living = Image("images/Assets/Background/bg-living.jpg")
+image bg living real = Image("images/Assets/Background/Originals/bg-living-original.jpg")
 image bg room = Image("images/Assets/Background/bg-room.jpg")
+image bg room real = Image("images/Assets/Background/Originals/bg-room-original.jpg")
 image bg therapist = Image("images/Assets/Background/bg-therapist.jpg")
+image bg therapist real = Image("images/Assets/Background/Originals/bg-therapist-original.jpg")
 image bg station = Image("images/Assets/Background/bg-station.jpg")
+image bg station real = Image("images/Assets/Background/Originals/bg-station-original.jpg")
+
+
 image peggy = Image("images/Assets/Character/ch-neighbor.png")
 image spousem = Image("images/Assets/Character/ch-spouse-m.png")
 image spousef = Image("images/Assets/Character/ch-spouse-f.png")
@@ -75,7 +86,9 @@ label intro:
 
 
 label conflict:
-    scene bg kitchen at truecenter with fade
+    scene bg kitchen real at truecenter with fade
+    with Pause(1)
+    scene bg kitchen at truecenter with dissolve
     "After a tense dinner party with some of your closest friends, 
      you’re in the kitchen cleaning up and preparing dinner for 
      the upcoming week and trying not to think about the growing 
@@ -128,7 +141,9 @@ label murder:
     return
 
 label phonecall:
-    scene bg living with fade
+    scene bg living real at truecenter with fade
+    with Pause(1)
+    scene bg living at truecenter with dissolve
     "*phone rings*"
     show peggy at right with easeinright
     p "Hey [player_name],just calling to check up with you guys. How's the 
@@ -150,7 +165,9 @@ label phonecall:
     return
     
 label hidebody:
-    scene bg kitchen with fade
+    scene bg kitchen real at truecenter with fade
+    with Pause(1)
+    scene bg kitchen at truecenter with dissolve
     "You decide to hide the body. But where would be a good place it wouldn’t be 
      found?"
     menu:
@@ -169,33 +186,47 @@ label hidebody:
     return
     
 label bathtub:
-    scene bg bath with fade
+    scene bg bath real at truecenter with fade
+    with Pause(1)
+    scene bg bath at truecenter with dissolve
     "Unfortunately, you were never much good at chemistry, and you botch the whole 
      thing, clogging the shower drain in the process. The plumber you call in fixes 
      it for you, but by then, he knows too much. And anyway, what's one plumber among friends?"
+    jump end
     return
     
 label lake:
-    scene bg lake with fade
+    scene bg lake real at truecenter with fade
+    with Pause(1)
+    scene bg lake at truecenter with dissolve
     "The lake is dredged for dam renovations, and the body is found. Fortunately, 
      so are several others. Looks like you're in the clear for a while yet. "
+    jump end
     return
     
 label plants:
-    scene bg garden with fade
+    scene bg garden real at truecenter with fade
+    with Pause(1)
+    scene bg garden at truecenter with dissolve
     "Your tomatoes appreciate the extra nutrients and grow stronger than ever."
+    jump end
     return
     
 label feed:
-    scene bg dining with fade
+    scene bg dining real at truecenter with fade
+    with Pause(1)
+    scene bg dining at truecenter with dissolve
     "Your dinner guests tell you it's the most delicious meal they've ever had. 
      You go on to enter the dish in countless competitions, winning prizes left 
      and right. But soon, you run out of usable meat, and demand has not slowed 
      down. It looks like you'll just have to do what it takes to meet the requests."
+    jump end
     return
     
 label turnselfin:
-    scene bg station with fade
+    scene bg station real at truecenter with fade
+    with Pause(1)
+    scene bg station at truecenter with dissolve
     "The guilt of your actions overwhelms you, and you call for both an ambulance 
      and the police. But by the time the ambulance gets there, it's already too 
      late."
@@ -222,6 +253,7 @@ label letthemgo:
      sometimes, mostly about trivial things. The weather, new movie releases. 
      It used to hurt, but now it's more of a dull ache, and it gets better 
      every day. You'll find your own happiness somewhere, you're sure of it."
+    jump end
     return
 
 
@@ -230,7 +262,9 @@ label counseling:
     spouse "I guess we could go to counseling. But it’s a lot of work. Are you 
        willing to put in the effort?"
     
-    scene bg therapist with fade
+    scene bg therapist real at truecenter with fade
+    with Pause(1)
+    scene bg therapist at truecenter with dissolve
     if gender == "male":
         show spousef at left with easeinleft
     elif gender == "female":
