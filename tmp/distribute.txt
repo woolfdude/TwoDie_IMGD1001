@@ -4,7 +4,11 @@ _Important Documents/ matches ** ([u'all']).
 _Important Documents/Asset List.xlsx matches ** ([u'all']).
 _Important Documents/CharacterList.docx matches ** ([u'all']).
 _Important Documents/daily schedule.pdf matches ** ([u'all']).
-Archive_9:22.zip matches ** ([u'all']).
+_Important Documents/general flowchart.pdf matches ** ([u'all']).
+_Important Documents/Generalscenescript.docx matches ** ([u'all']).
+_Important Documents/Scenelist.docx matches ** ([u'all']).
+_TwoDie_A15_Prototype.zip matches ** ([u'all']).
+Backup_9_22.zip matches ** ([u'all']).
 errors.txt matches errors.txt (None).
 game/ matches ** ([u'all']).
 game/.DS_Store matches **/.** (None).
@@ -12,20 +16,29 @@ game/cache/ matches ** ([u'all']).
 game/cache/bytecode.rpyb matches ** ([u'all']).
 game/cache/pyanalysis.rpyb matches ** ([u'all']).
 game/cache/screens.rpyb matches ** ([u'all']).
-game/Cheremisinov.mp3 matches ** ([u'all']).
 game/images/ matches ** ([u'all']).
 game/images/.DS_Store matches **/.** (None).
 game/images/Assets/ matches ** ([u'all']).
 game/images/Assets/.DS_Store matches **/.** (None).
 game/images/Assets/Background/ matches ** ([u'all']).
+game/images/Assets/Background/.DS_Store matches **/.** (None).
 game/images/Assets/Background/bg-bath.jpg matches ** ([u'all']).
 game/images/Assets/Background/bg-dining.jpg matches ** ([u'all']).
 game/images/Assets/Background/bg-garden.jpg matches ** ([u'all']).
 game/images/Assets/Background/bg-kitchen.jpg matches ** ([u'all']).
 game/images/Assets/Background/bg-lake.jpg matches ** ([u'all']).
 game/images/Assets/Background/bg-living.jpg matches ** ([u'all']).
-game/images/Assets/Background/bg-room.jpg matches ** ([u'all']).
 game/images/Assets/Background/bg-station.jpg matches ** ([u'all']).
+game/images/Assets/Background/bg-therapist.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/ matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-bath-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-dining-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-garden-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-kitchen-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-lake-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-living-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-station-original.jpg matches ** ([u'all']).
+game/images/Assets/Background/Originals/bg-theraphist-original.jpg matches ** ([u'all']).
 game/images/Assets/Character/ matches ** ([u'all']).
 game/images/Assets/Character/ch-atendee-1.png matches ** ([u'all']).
 game/images/Assets/Character/ch-atendee-2.png matches ** ([u'all']).
@@ -47,9 +60,15 @@ game/images/Assets/Misc/ matches ** ([u'all']).
 game/images/Assets/Misc/ms-logo.png matches ** ([u'all']).
 game/images/Assets/Misc/ms-menu.jpg matches ** ([u'all']).
 game/images/Assets/Misc/ms-title.png matches ** ([u'all']).
-game/images/bg_lake.png matches ** ([u'all']).
 game/images/bg_title.png matches ** ([u'all']).
 game/images/dice.png matches ** ([u'all']).
+game/Music/ matches ** ([u'all']).
+game/Music/music1.mp3 matches ** ([u'all']).
+game/Music/music2.mp3 matches ** ([u'all']).
+game/Music/music3.mp3 matches ** ([u'all']).
+game/Music/music4.mp3 matches ** ([u'all']).
+game/Music/music5.mp3 matches ** ([u'all']).
+game/Music/music6.mp3 matches ** ([u'all']).
 game/options.rpy matches ** ([u'all']).
 game/options.rpy.bak matches **.bak (None).
 game/options.rpyc matches ** ([u'all']).
@@ -59,15 +78,12 @@ game/screens.rpy.bak matches **.bak (None).
 game/screens.rpyc matches ** ([u'all']).
 game/script.rpy matches ** ([u'all']).
 game/script.rpyc matches ** ([u'all']).
-general flowchart.pdf matches ** ([u'all']).
-Generalscenescript.docx matches ** ([u'all']).
 IMGD_Project/ matches ** ([u'all']).
 IMGD_Project/test.txt matches ** ([u'all']).
 log.txt matches log.txt (None).
 Practicalscreens.docx matches ** ([u'all']).
 project.json matches project.json (None).
 README.html matches ** ([u'all']).
-Scenelist.docx matches ** ([u'all']).
 tmp/ matches tmp/ (None).
 traceback.txt matches traceback.txt (None).
 .DS_Store matches **/.* (None).

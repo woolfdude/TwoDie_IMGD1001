@@ -146,7 +146,7 @@ label phonecall:
     scene bg living at truecenter with dissolve
     "*phone rings*"
     show peggy at right with easeinright
-    p "Hey [player_name],just calling to check up with you guys. How's the 
+    p "Hey [player_name],just calling to check up with you guys. How's 
        [spouse_name] doing?"
     "You decide to tell her that [spouse_name].."
     menu: 
@@ -160,7 +160,7 @@ label phonecall:
             p "I’m so sorry to hear that. Listen, if you ever need anything, I’m 
                always here for you. You’ll make it through this. Let’s catch up 
                later, yeah?"
-    "Peggy hangs up"
+    "Peggy hangs up."
     jump hidebody
     return
     
