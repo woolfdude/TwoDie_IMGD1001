@@ -1,24 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 81, in script
-    scene bg kitchen at truecenter with disolve
-  File "game/script.rpy", line 81, in <module>
-    scene bg kitchen at truecenter with disolve
-NameError: name 'disolve' is not defined
+  File "game/day1.rpy", line 49, in script
+    jump end
+ScriptError: could not find label 'end'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 81, in script
-    scene bg kitchen at truecenter with disolve
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1246, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/python.py", line 1482, in py_eval
-    return eval(py_compile(source, 'eval'), globals, locals)
-  File "game/script.rpy", line 81, in <module>
-    scene bg kitchen at truecenter with disolve
-NameError: name 'disolve' is not defined
+  File "game/day1.rpy", line 49, in script
+    jump end
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1497, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/script.py", line 764, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'end'.
 
 Darwin-14.4.0-x86_64-i386-64bit
 Ren'Py 6.99.5.602
