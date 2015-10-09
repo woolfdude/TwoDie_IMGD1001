@@ -1,13 +1,15 @@
 .DS_Store matches **/.** (None).
 .git/ matches **/.** (None).
+___BETAFORTESTING___/ matches ** ([u'all']).
+___BETAFORTESTING___/.DS_Store matches **/.** (None).
 _Important Documents/ matches ** ([u'all']).
 _Important Documents/Asset List.xlsx matches ** ([u'all']).
 _Important Documents/CharacterList.docx matches ** ([u'all']).
 _Important Documents/daily schedule.pdf matches ** ([u'all']).
 _Important Documents/general flowchart.pdf matches ** ([u'all']).
 _Important Documents/Generalscenescript.docx matches ** ([u'all']).
+_Important Documents/Practicalscreens.docx matches ** ([u'all']).
 _Important Documents/Scenelist.docx matches ** ([u'all']).
-_Important Documents/~$Asset List.xlsx matches ** ([u'all']).
 errors.txt matches errors.txt (None).
 game/ matches ** ([u'all']).
 game/.DS_Store matches **/.** (None).
@@ -15,12 +17,6 @@ game/cache/ matches ** ([u'all']).
 game/cache/bytecode.rpyb matches ** ([u'all']).
 game/cache/pyanalysis.rpyb matches ** ([u'all']).
 game/cache/screens.rpyb matches ** ([u'all']).
-game/day1.rpy matches ** ([u'all']).
-game/day1.rpyc matches ** ([u'all']).
-game/day2.rpy matches ** ([u'all']).
-game/day2.rpyc matches ** ([u'all']).
-game/endings.rpy matches ** ([u'all']).
-game/endings.rpyc matches ** ([u'all']).
 game/images/ matches ** ([u'all']).
 game/images/Assets/ matches ** ([u'all']).
 game/images/Assets/Background/ matches ** ([u'all']).
@@ -59,8 +55,6 @@ game/images/Assets/Misc/ms-logo-dark.png matches ** ([u'all']).
 game/images/Assets/Misc/ms-logo.png matches ** ([u'all']).
 game/images/Assets/Misc/ms-title.png matches ** ([u'all']).
 game/images/Assets/Misc/twodiegames.png matches ** ([u'all']).
-game/murder.rpy matches ** ([u'all']).
-game/murder.rpyc matches ** ([u'all']).
 game/Music/ matches ** ([u'all']).
 game/Music/.DS_Store matches **/.** (None).
 game/Music/doorbell.mp3 matches ** ([u'all']).
@@ -69,17 +63,25 @@ game/Music/music2.mp3 matches ** ([u'all']).
 game/Music/music6.mp3 matches ** ([u'all']).
 game/Music/phoneRing.mp3 matches ** ([u'all']).
 game/Music/splashCut.mp3 matches ** ([u'all']).
-game/opening.rpy matches ** ([u'all']).
-game/opening.rpyc matches ** ([u'all']).
-game/options.rpy matches ** ([u'all']).
-game/options.rpy.bak matches **.bak (None).
-game/options.rpyc matches ** ([u'all']).
 game/saves/ matches game/saves/ (None).
-game/screens.rpy matches ** ([u'all']).
-game/screens.rpy.bak matches **.bak (None).
-game/screens.rpyc matches ** ([u'all']).
+game/Scripts/ matches ** ([u'all']).
+game/Scripts/day1.rpy matches ** ([u'all']).
+game/Scripts/day1.rpyc matches ** ([u'all']).
+game/Scripts/day2.rpy matches ** ([u'all']).
+game/Scripts/day2.rpyc matches ** ([u'all']).
+game/Scripts/endings.rpy matches ** ([u'all']).
+game/Scripts/endings.rpyc matches ** ([u'all']).
+game/Scripts/murder.rpy matches ** ([u'all']).
+game/Scripts/murder.rpyc matches ** ([u'all']).
+game/Scripts/opening.rpy matches ** ([u'all']).
+game/Scripts/opening.rpyc matches ** ([u'all']).
+game/Scripts/options.rpy matches ** ([u'all']).
+game/Scripts/options.rpy.bak matches **.bak (None).
+game/Scripts/options.rpyc matches ** ([u'all']).
+game/Scripts/screens.rpy matches ** ([u'all']).
+game/Scripts/screens.rpy.bak matches **.bak (None).
+game/Scripts/screens.rpyc matches ** ([u'all']).
 log.txt matches log.txt (None).
-Practicalscreens.docx matches ** ([u'all']).
 project.json matches project.json (None).
 README.html matches ** ([u'all']).
 tmp/ matches tmp/ (None).

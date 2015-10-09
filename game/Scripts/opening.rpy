@@ -19,7 +19,7 @@ image bg station real = Image("images/Assets/Background/Originals/bg-station-ori
 
 image peggy = Image("images/Assets/Character/ch-neighbor.png")
 define p = Character('Peggy', color="#c8ffc8")
-image sam = Image("images/Assets/Character/ch-atendee-1.png")
+image sam = Image("images/Assets/Character/ch-atendee-2.png")
 define sam = Character('Sam', color="#c8ffc8")
 image patricia = Image("images/Assets/Character/ch-atendee-3.png")
 define patricia = Character('Patricia', color="#c8ffc8")
