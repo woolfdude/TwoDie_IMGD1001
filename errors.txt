@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 79: end of line expected.
-    scene bg kitchen real at truecenter with fade, Pause(1)
-                                                 ^
+File "game/day2.rpy", line 148: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    menu:
+    ^
 
 Ren'Py Version: Ren'Py 6.99.5.602

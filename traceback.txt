@@ -1,20 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/day1.rpy", line 49, in script
-    jump end
-ScriptError: could not find label 'end'.
+  File "game/endings.rpy", line 59, in script
+    scene black with fade (10.0)
+TypeError: 'Dissolve' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/day1.rpy", line 49, in script
-    jump end
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1497, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/script.py", line 764, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'end'.
+  File "game/endings.rpy", line 59, in script
+    scene black with fade (10.0)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1250, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/exports.py", line 1251, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 1865, in do_with
+    clear=clear)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 2285, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 2495, in interact_core
+    new_widget=layers_root)
+TypeError: 'Dissolve' object is not callable
 
 Darwin-14.4.0-x86_64-i386-64bit
 Ren'Py 6.99.5.602
