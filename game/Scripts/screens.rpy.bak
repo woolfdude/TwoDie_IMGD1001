@@ -5,12 +5,6 @@
 # future. The use of **kwargs in the parameter list ensures your code will
 # work in the future.
 
-screen textbutton_screen():
-            vbox:
-                textbutton "Wine" action Jump("wine")
-                textbutton "Women" action Jump("women")
-                textbutton "Song" action Jump("song")
-
 ##############################################################################
 # Say
 #

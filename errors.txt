@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/day2.rpy", line 148: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    menu:
-    ^
+File "game/Scripts/screens.rpy", line 7: u'Jump' is not a keyword argument or valid child for the vbox statement.
+    Jump("splashscreen")
+        ^
 
 Ren'Py Version: Ren'Py 6.99.5.602

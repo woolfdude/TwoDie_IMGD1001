@@ -71,7 +71,7 @@ init -1 python hide:
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "images/Assets/Misc/ms-title.png",
+        mm_root = "Assets/images/Misc/ms-title.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
@@ -187,7 +187,7 @@ init -1 python hide:
 
     ## Music that is played while the user is at the main menu.
 
-    config.main_menu_music = "Music/music1.mp3"
+    config.main_menu_music = "Assets/Music/music1.mp3"
 
 
     #########################################

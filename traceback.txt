@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/endings.rpy", line 59, in script
-    scene black with fade (10.0)
-TypeError: 'Dissolve' object is not callable
+  File "game/Scripts/TLDR.rpy", line 6, in script
+    call screen end_divorce()
+ScriptError: could not find label 'splash_screen'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/endings.rpy", line 59, in script
-    scene black with fade (10.0)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/ast.py", line 1250, in execute
-    renpy.exports.with_statement(trans, paired)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/exports.py", line 1251, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 1865, in do_with
-    clear=clear)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 2285, in interact
-    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
-  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/display/core.py", line 2495, in interact_core
-    new_widget=layers_root)
-TypeError: 'Dissolve' object is not callable
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/bootstrap.py", line 281, in bootstrap
+    renpy.main.main()
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/main.py", line 466, in main
+    run(restart)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/main.py", line 142, in run
+    renpy.execution.run_context(True)
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/execution.py", line 700, in run_context
+    context.run()
+  File "game/Scripts/TLDR.rpy", line 6, in script
+    call screen end_divorce()
+  File "/Users/gui/Desktop/renpy-6.99.5-sdk/renpy/script.py", line 764, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'splash_screen'.
 
 Darwin-14.4.0-x86_64-i386-64bit
 Ren'Py 6.99.5.602
